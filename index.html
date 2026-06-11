@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมคำนวณสารเคมีในบ่อเพาะเลี้ยงสัตว์น้ำ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>โปรแกรมคำนวณการใช้สารเคมีในบ่อเพาะเลี้ยงสัตว์น้ำ</h1>
+
+        <h2>ข้อมูลบ่อ</h2>
+
+        <label>รูปแบบบ่อ</label>
+        <select id="pondType" onchange="changePondType()">
+            <option>บ่อรูปสี่เหลี่ยม</option>
+            <option>บ่อรูปทรงกลม</option>
+            <option>บ่อรูปวงรี</option>
+        </select>
+
+        <label id="widthLabel">ความกว้าง (เมตร)</label>
+<input type="number" id="width">
+
+<label id="lengthLabel">ความยาว (เมตร)</label>
+<input type="number" id="length">
+
+<label id="depthLabel">ความลึก (เมตร)</label>
+<input type="number" id="depth">
+
+<button onclick="calculateVolume()">
+    คำนวณปริมาตรน้ำ
+</button>
+
+        <div id="result"></div>
+       
+        <h2>ข้อมูลสารเคมี</h2>
+<label>วัตถุประสงค์</label>
+<select id="objective" onchange="loadChemicals()">
+    <option value="">-- เลือกวัตถุประสงค์ --</option>
+</select>
+
+<label>ชนิดสารเคมี</label>
+<select id="chemical" onchange="loadChemicalInfo()">
+    <option value="">-- เลือกสารเคมี --</option>
+</select>
+<label>อัตราการใช้ต่ำสุด</label>
+<input type="text" id="minRate" readonly>
+
+<label>อัตราการใช้สูงสุด</label>
+<input type="text" id="maxRate" readonly>
+
+<label>อัตราที่ใช้คำนวณ</label>
+<input type="number" id="selectedRate" step="0.01">
+
+<label>หน่วยความเข้มข้น</label>
+<input type="text" id="unit" readonly>
+<label>หน่วยที่ใช้</label>
+<input type="text" id="useUnit" readonly>
+
+<label>หน่วยผลลัพธ์</label>
+<input type="text" id="resultUnit" readonly>
+<button onclick="calculateChemical()">
+    คำนวณปริมาณสารเคมี
+</button>
+
+<div id="chemicalResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<div id="chemicalResult"></div>

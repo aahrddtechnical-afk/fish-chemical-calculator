@@ -1,4 +1,7 @@
 const SHEET_URL =
+
+console.log("SCRIPT VERSION 12-06-2026");
+
 "https://opensheet.elk.sh/1o6skM5ZgGk6TNMf0ITwA6n9FpKQT3l80_2_V-lMItGM/ฐานข้อมูลสารเคมีสัตว์น้ำ";
 let waterVolumeM3 = 0;
 let waterVolumeLiter = 0;
@@ -81,9 +84,6 @@ fetch(SHEET_URL)
           document.getElementById("objective");
 
       console.log(data);
-
-      const objectiveSelect =
-          document.getElementById("objective");
 
       const objectives =
           [...new Set(

@@ -1,12 +1,11 @@
-const SHEET_URL =
-
 console.log("SCRIPT VERSION 12-06-2026");
 
+const SHEET_URL =
 "https://opensheet.elk.sh/1o6skM5ZgGk6TNMf0ITwA6n9FpKQT3l80_2_V-lMItGM/ฐานข้อมูลสารเคมีสัตว์น้ำ";
+
 let waterVolumeM3 = 0;
 let waterVolumeLiter = 0;
 let pondAreaRai = 0;
-
 function calculateVolume() {
 
     const pondType =

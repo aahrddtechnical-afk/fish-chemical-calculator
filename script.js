@@ -177,7 +177,16 @@ function changePondType() {
 changePondType();
 function getUnitInfo(concentrationUnit) {
 
-    switch (concentrationUnit) {
+    concentrationUnit =
+        String(concentrationUnit)
+        .trim()
+        .toLowerCase();
+
+console.log(
+    "[" + concentrationUnit + "]"
+);
+
+    switch (concentrationUnit)  {
 
         case "ppm":
 
@@ -185,6 +194,11 @@ function getUnitInfo(concentrationUnit) {
                 useUnit: "ppm",
                 resultUnit: "กิโลกรัม"
             };
+        case "ppt":
+            return {
+                useUnit: "กรัม/น้ำ 1 ลิตร",
+                resultUnit: "กิโลกรัม"
+    };
 
         case "มิลลิกรัม/น้ำ 1 ลิตร":
 
@@ -220,6 +234,7 @@ function getUnitInfo(concentrationUnit) {
                 useUnit: concentrationUnit,
                 resultUnit: "-"
             };
+            
     }
 }
 function loadChemicalInfo() {
@@ -243,11 +258,18 @@ console.log(chemical);
     document.getElementById("unit").value =
         chemical["หน่วยความเข้มข้น"];
 
+    console.log(
+          "หน่วยจากชีท =",
+          chemical["หน่วยความเข้มข้น"]
+
+);
     const unitInfo =
     getUnitInfo(
         chemical["หน่วยความเข้มข้น"]
     );
-
+        console.log("หน่วยจากชีท =", chemical["หน่วยความเข้มข้น"]);
+        console.log("unitInfo =", unitInfo);
+        
     document.getElementById("useUnit").value =
         unitInfo.useUnit;
     

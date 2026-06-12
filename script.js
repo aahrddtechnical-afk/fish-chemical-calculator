@@ -68,6 +68,17 @@ fetch(SHEET_URL)
   .then(data => {
 
       chemicalData = data;
+      console.log("ข้อมูลทั้งหมดจากชีท", data);
+
+      const saltData =
+          data.filter(item =>
+              item["ชนิดสาร"] === "เกลือ"
+          );
+
+      console.log("ข้อมูลเกลือ", saltData);
+
+      const objectiveSelect =
+          document.getElementById("objective");
 
       console.log(data);
 
@@ -242,11 +253,17 @@ function loadChemicalInfo() {
     const selectedChemical =
         document.getElementById("chemical").value;
 
-    const chemical =
-        chemicalData.find(item =>
-            item["ชนิดสาร"] === selectedChemical
-        );
-console.log(chemical);
+    const purpose =
+    document.getElementById("objective").value;
+
+const chemical =
+    chemicalData.find(item =>
+        item["ชนิดสาร"] === selectedChemical &&
+        item["วัตถุประสงค์"] === purpose
+    );
+
+console.log("โหลดข้อมูลสาร:", chemical);
+
     if (!chemical) return;
 
     document.getElementById("minRate").value =
@@ -291,10 +308,15 @@ console.log("pondAreaRai =", pondAreaRai);
     const chemicalName =
         document.getElementById("chemical").value;
 
-    const chemical =
-        chemicalData.find(item =>
-            item["ชนิดสาร"] === chemicalName
-        );
+    const purpose =
+    document.getElementById("objective").value;
+
+const chemical =
+    chemicalData.find(item =>
+        item["ชนิดสาร"] === chemicalName &&
+        item["วัตถุประสงค์"] === purpose
+    );
+console.log("คำนวณจากข้อมูล:", chemical);
 
     if (!chemical) {
         alert("กรุณาเลือกสารเคมี");

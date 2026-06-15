@@ -416,6 +416,12 @@ case "ลิตร/ไร่":
     break;
 }
 
+let resultText = `${result.toFixed(2)} ${resultUnit}`;
+
+if (resultUnit === "กิโลกรัม") {
+    resultText += ` (${(result * 1000).toFixed(0)} กรัม)`;
+}
+
 document.getElementById("chemicalResult").innerHTML =
 `
 <h3>ผลการคำนวณ</h3>

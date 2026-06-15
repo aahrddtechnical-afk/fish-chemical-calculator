@@ -434,7 +434,7 @@ ${rate} ${useUnit}
 
 <hr>
 
-<h3>ต้องใช้สารเคมี ${result.toFixed(2)} ${resultUnit}</h3>
+<h3>ต้องใช้สารเคมี ${resultText}</h3>
 `;
 
 }

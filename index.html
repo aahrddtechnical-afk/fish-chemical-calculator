@@ -11,11 +11,15 @@
 
 <body>
 
-    <div class="header"> <h1>🐟 โปรแกรมคำนวณการใช้สารเคมีในบ่อเพาะเลี้ยงสัตว์น้ำ</h1> <p>คำนวณปริมาตรน้ำ พื้นที่บ่อ และปริมาณสารเคมีที่ต้องใช้</p> </div>
+<div class="container">
 
-<div class="card"></div>
+<div class="header"> <h1>🐟 ระบบคำนวณการใช้สารเคมีในบ่อเพาะเลี้ยงสัตว์น้ำ</h1> <p>กรมประมง - Aquaculture Chemical Calculator</p> </div>
 
-        <h2>ข้อมูลบ่อ</h2>
+<div class="dashboard"> 
+
+    <div class="card">
+
+    <div class="card-title"> 🌊 ข้อมูลบ่อเพาะเลี้ยง </div>
 
         <label>รูปแบบบ่อ</label>
         <select id="pondType" onchange="changePondType()">
@@ -41,9 +45,10 @@
 
        </div>
 
-       <div class="card"></div>
+       <div class="card">
 
-        <h2>ข้อมูลสารเคมี</h2>
+<div class="card-title"> 🧪 ข้อมูลสารเคมี </div>
+
 <label>วัตถุประสงค์</label>
 <select id="objective" onchange="loadChemicals()">
     <option value="">-- เลือกวัตถุประสงค์ --</option>
@@ -72,9 +77,10 @@
 <button onclick="calculateChemical()">
     คำนวณปริมาณสารเคมี
 </button>
-
+</div>
 <div id="chemicalResult"></div>
-    </div>
+
+</div>
 
     <script src="script.js"></script>
 
@@ -82,6 +88,3 @@
 
 </html>
 
-<div id="chemicalResult"></div>
-
-</div>

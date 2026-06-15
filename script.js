@@ -416,32 +416,31 @@ case "ลิตร/ไร่":
     break;
 }
 
-let resultText = `${result.toFixed(2)} ${resultUnit}`;
+document.getElementById("chemicalResult").innerHTML = `
+<div class="result-box">
 
-if (resultUnit === "กิโลกรัม") {
-    resultText += ` (${(result * 1000).toFixed(0)} กรัม)`;
-}
+    <div class="result-title">
+        ปริมาณสารเคมีที่ต้องใช้
+    </div>
 
-document.getElementById("chemicalResult").innerHTML =
-`
-<h3>ผลการคำนวณ</h3>
+    <div class="result-number">
+        ${result.toFixed(2)}
+    </div>
 
-<p><b>ชนิดสารเคมี:</b> ${chemicalName}</p>
+    <div class="result-sub">
+        ${resultUnit}
+    </div>
 
-<p><b>ปริมาตรน้ำ:</b>
-${waterVolumeLiter.toLocaleString()} ลิตร
-</p>
+    ${
+        resultUnit === "กิโลกรัม"
+        ? `<div class="result-sub">
+              (${(result * 1000).toLocaleString()} กรัม)
+           </div>`
+        : ""
+    }
 
-พื้นที่บ่อ : ${pondAreaRai.toFixed(4)} ไร่<br>
-
-<p><b>อัตราที่เลือกใช้:</b>
-${rate} ${useUnit}
-</p>
-
-<hr>
-
-<h3>ต้องใช้สารเคมี ${resultText}</h3>
+</div>
 `;
-
 }
+
 

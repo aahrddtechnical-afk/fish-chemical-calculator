@@ -182,7 +182,7 @@ fetch(SHEET_URL)
     });
 
 }
-function changePondType() {
+function changepondType() {
 
     const pondType =
         document.getElementById("pondType").value;
@@ -265,7 +265,7 @@ function changePondType() {
     }
 }
 
-changePondType();
+changepondType();
 
 function getUnitInfo(concentrationUnit) {
 

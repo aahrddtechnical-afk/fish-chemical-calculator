@@ -320,6 +320,20 @@ console.log(
                 resultUnit: "กิโลกรัม"
             };
 
+        case "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม":
+
+            return {
+                useUnit: "มิลลิกรัม/กิโลกรัม",
+                resultUnit: "กรัม"
+            };
+
+            case "กรัม/น้ำ 1 ตัน":
+
+             return {
+                useUnit: "กรัม/น้ำ 1 ตัน",
+                resultUnit: "กิโลกรัม"
+            };
+
         default:
 
             return {
@@ -460,42 +474,63 @@ console.log("resultUnit =", resultUnit);
 
     break;
 
-case "มิลลิลิตร/น้ำ 1 ลิตร":
-case "ซีซี/น้ำ 1 ลิตร":
+    case "มิลลิลิตร/น้ำ 1 ลิตร":
+    case "ซีซี/น้ำ 1 ลิตร":
 
     result =
         (waterVolumeLiter * rate) / 1000;
 
     break;
 
-case "มิลลิลิตร/ลูกบาศก์เมตร":
-case "กรัม/ลูกบาศก์เมตร":
+    case "มิลลิลิตร/ลูกบาศก์เมตร":
+    case "กรัม/ลูกบาศก์เมตร":
 
     result =
         (waterVolumeM3 * rate) / 1000;
 
     break;
 
-case "กิโลกรัม/ไร่":
+    case "กิโลกรัม/ไร่":
 
     result =
         pondAreaRai * rate;
 
     break;
 
-case "กรัม/ไร่":
+    case "กรัม/ไร่":
 
     result =
         (pondAreaRai * rate) / 1000;
 
     break;
 
-case "ลิตร/ไร่":
+    case "ลิตร/ไร่":
 
     result =
         pondAreaRai * rate;
 
     break;
+
+    case "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม":
+
+    const animalWeight =
+        parseFloat(
+            document.getElementById("animalWeight").value
+        ) || 0;
+
+    result =
+        (animalWeight * rate) / 1000;
+
+    break;
+
+    case "กรัม/น้ำ 1 ตัน":
+
+    result =
+        (waterVolumeLiter / 1000 * rate)
+        / 1000;
+
+    break;
+    
 }
 
 document.getElementById("chemicalResult").innerHTML = `

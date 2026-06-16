@@ -20,13 +20,37 @@ function calculateVolume() {
     const depth =
         parseFloat(document.getElementById("depth").value) || 0;
 
-if (width <= 0 || depth <= 0) {
-    alert("กรุณากรอกข้อมูลบ่อให้ครบ");
+if (depth <= 0) {
+    alert("กรุณากรอกความลึก");
     return;
 }
-if (length <= 0) {
-    alert("กรุณากรอกความยาว");
-    return;
+
+if (pondType === "คำนวณจากพื้นที่ (ไร่)") {
+
+    const pondRai =
+        parseFloat(
+            document.getElementById("pondRai").value
+        ) || 0;
+
+    if (pondRai <= 0) {
+        alert("กรุณากรอกพื้นที่บ่อ (ไร่)");
+        return;
+    }
+
+} else {
+
+    if (width <= 0) {
+        alert("กรุณากรอกความกว้าง");
+        return;
+    }
+
+    if (
+        pondType !== "บ่อรูปทรงกลม" &&
+        length <= 0
+    ) {
+        alert("กรุณากรอกความยาว");
+        return;
+    }
 }
     let volume = 0;
     let area = 0;
@@ -50,6 +74,21 @@ if (pondType === "บ่อรูปสี่เหลี่ยม") {
         area = Math.PI * (width / 2) * (length / 2);
         volume = area * depth;
     }
+
+    else if (
+    pondType === "คำนวณจากพื้นที่ (ไร่)"
+) {
+
+    const pondRai =
+        parseFloat(
+            document.getElementById("pondRai").value
+        ) || 0;
+
+    area = pondRai * 1600;
+
+    volume = area * depth;
+}
+
     const liter = volume * 1000;
     const rai = area / 1600;
 

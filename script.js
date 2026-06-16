@@ -144,17 +144,41 @@ function changePondType() {
     const lengthLabel =
         document.getElementById("lengthLabel");
 
+    const widthInput =
+        document.getElementById("width");
+
     const lengthInput =
         document.getElementById("length");
+
+    const pondRaiInput =
+        document.getElementById("pondRai");
+
+    const raiGroup =
+        document.getElementById("raiGroup");
 
     if (pondType === "บ่อรูปทรงกลม") {
 
         widthLabel.textContent =
             "เส้นผ่านศูนย์กลาง (เมตร)";
 
+        widthLabel.style.display = "block";
+        widthInput.style.display = "block";
+
         lengthLabel.style.display = "none";
         lengthInput.style.display = "none";
 
+        raiGroup.style.display = "none";
+    }
+
+    else if (pondType === "คำนวณจากพื้นที่ (ไร่)") {
+
+        widthLabel.style.display = "none";
+        widthInput.style.display = "none";
+
+        lengthLabel.style.display = "none";
+        lengthInput.style.display = "none";
+
+       raiGroup.style.display = "block";
     }
 
     else if (pondType === "บ่อรูปวงรี") {
@@ -165,9 +189,13 @@ function changePondType() {
         lengthLabel.textContent =
             "ความยาวแกนยาว (เมตร)";
 
+        widthLabel.style.display = "block";
+        widthInput.style.display = "block";
+
         lengthLabel.style.display = "block";
         lengthInput.style.display = "block";
 
+        raiGroup.style.display = "none";
     }
 
     else {
@@ -178,13 +206,18 @@ function changePondType() {
         lengthLabel.textContent =
             "ความยาว (เมตร)";
 
+        widthLabel.style.display = "block";
+        widthInput.style.display = "block";
+
         lengthLabel.style.display = "block";
         lengthInput.style.display = "block";
 
+        raiGroup.style.display = "none";
     }
-
 }
+
 changePondType();
+
 function getUnitInfo(concentrationUnit) {
 
     concentrationUnit =

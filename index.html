@@ -23,10 +23,11 @@
 
         <label>รูปแบบบ่อ</label>
         <select id="pondType" onchange="changePondType()">
-            <option>บ่อรูปสี่เหลี่ยม</option>
-            <option>บ่อรูปทรงกลม</option>
-            <option>บ่อรูปวงรี</option>
-        </select>
+    <option>บ่อรูปสี่เหลี่ยม</option>
+    <option>บ่อรูปทรงกลม</option>
+    <option>บ่อรูปวงรี</option>
+    <option>คำนวณจากพื้นที่ (ไร่)</option>
+</select>
 
         <label id="widthLabel">ความกว้าง (เมตร)</label>
 <input type="number" id="width">
@@ -36,6 +37,14 @@
 
 <label id="depthLabel">ความลึก (เมตร)</label>
 <input type="number" id="depth">
+
+<div id="raiGroup">
+
+    <label>พื้นที่บ่อ (ไร่)</label>
+
+    <input type="number" id="pondRai" step="0.01">
+
+</div>
 
 <button onclick="calculateVolume()">
     คำนวณปริมาตรน้ำ

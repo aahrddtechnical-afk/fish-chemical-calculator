@@ -8,6 +8,17 @@ let waterVolumeLiter = 0;
 let pondAreaRai = 0;
 function calculateVolume() {
 
+console.log("=== calculateVolume ===");
+console.log("pondType =", pondType);
+console.log("width =", width);
+console.log("length =", length);
+console.log("depth =", depth);
+
+const pondRaiValue =
+    document.getElementById("pondRai")?.value;
+
+console.log("pondRai =", pondRaiValue);
+
     const pondType =
         document.getElementById("pondType").value;
 

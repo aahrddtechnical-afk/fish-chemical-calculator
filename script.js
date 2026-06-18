@@ -323,15 +323,15 @@ console.log(
         case "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม":
 
             return {
-               useUnit: "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม",
-               resultUnit: "กรัม"
+                useUnit: "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม",
+                resultUnit: "กรัม"
             };
 
-            case "กรัม/น้ำ 1 ตัน":
+        case "กรัม/น้ำ 1 ตัน":
 
-             return {
-                useUnit: "กรัม/น้ำ 1 ตัน",
-                resultUnit: "กิโลกรัม"
+            return {
+               useUnit: "กรัม/น้ำ 1 ตัน",
+               resultUnit: "กิโลกรัม"
             };
 
         default:
@@ -392,6 +392,8 @@ console.log("โหลดข้อมูลสาร:", chemical);
         chemical["อัตราการใช้ต่ำสุด"];
 
 console.log(chemical);
+console.log("unitInfo =", unitInfo);
+console.log("resultUnit =", unitInfo.resultUnit);
 
 }   // 
 
@@ -527,7 +529,7 @@ console.log("resultUnit =", resultUnit);
         (rate * animalWeight) / 1000;
 
     break;
-    
+
     case "กรัม/น้ำ 1 ตัน":
 
     result =

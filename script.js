@@ -528,11 +528,6 @@ console.log("resultUnit =", resultUnit);
 
     break;
     
-    const animalWeight =
-        parseFloat(
-            document.getElementById("animalWeight").value
-        ) || 0;
-
     result =
         (animalWeight * rate) / 1000;
 

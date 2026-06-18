@@ -323,8 +323,8 @@ console.log(
         case "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม":
 
             return {
-                useUnit: "มิลลิกรัม/กิโลกรัม",
-                resultUnit: "กรัม"
+               useUnit: "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม",
+               resultUnit: "กรัม"
             };
 
             case "กรัม/น้ำ 1 ตัน":
@@ -513,6 +513,21 @@ console.log("resultUnit =", resultUnit);
 
     case "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม":
 
+    const animalWeight =
+        parseFloat(
+            document.getElementById("animalWeight").value
+        ) || 0;
+
+    if (animalWeight <= 0) {
+        alert("กรุณากรอกน้ำหนักสัตว์รวม");
+        return;
+    }
+
+    result =
+        (rate * animalWeight) / 1000;
+
+    break;
+    
     const animalWeight =
         parseFloat(
             document.getElementById("animalWeight").value

@@ -454,6 +454,11 @@ console.log("chemical =", document.getElementById("chemical"));
 
     let result = 0;
 
+    const animalWeight =
+         parseFloat(
+         document.getElementById("animalWeight").value
+    ) || 0;
+
 console.log("useUnit =", useUnit);
 console.log("resultUnit =", resultUnit);
 
@@ -513,11 +518,6 @@ console.log("resultUnit =", resultUnit);
 
     case "มิลลิกรัม/น้ำหนักตัว 1 กิโลกรัม":
 
-    const animalWeight =
-        parseFloat(
-            document.getElementById("animalWeight").value
-        ) || 0;
-
     if (animalWeight <= 0) {
         alert("กรุณากรอกน้ำหนักสัตว์รวม");
         return;
@@ -528,11 +528,6 @@ console.log("resultUnit =", resultUnit);
 
     break;
     
-    result =
-        (animalWeight * rate) / 1000;
-
-    break;
-
     case "กรัม/น้ำ 1 ตัน":
 
     result =

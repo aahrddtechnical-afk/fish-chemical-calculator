@@ -32,9 +32,10 @@ opacity:.9;
 }
 
 .dashboard{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    align-items:start;
 }
 
 .card{
@@ -172,5 +173,39 @@ margin-top:10px;
     .result-number{
         font-size:32px;
     }
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    height:fit-content;
+}
 
+.chemical-card{
+    grid-column:1 / -1;
+}
+
+.result-card{
+    grid-column:1 / -1;
+}
+
+#chemicalResult{
+    text-align:center;
+}
+
+@media (max-width:768px){
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .chemical-card{
+        grid-column:auto;
+    }
+
+    .result-card{
+        grid-column:auto;
+    }
+
+}
 }

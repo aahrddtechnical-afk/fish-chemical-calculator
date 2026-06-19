@@ -174,45 +174,71 @@ margin-top:10px;
     height:fit-content;
 }
 
-.chemical-card{
-    grid-column:1 / -1;
-}
-
-.result-card{
-    grid-column:1 / -1;
-}
-
 #chemicalResult{
     text-align:center;
-}
-
-@media (max-width:768px){
-
-    .dashboard{
-        grid-template-columns:1fr;
-    }
-
-    .chemical-card{
-        grid-column:auto;
-    }
-
-    .result-card{
-        grid-column:auto;
-    }
-
 }
 .dashboard{
     display:flex;
     flex-direction:column;
-    gap:35px;
+    gap:25px;
 }
 
 .card{
-    padding:25px;
-    margin-bottom:0;
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
 }
 
 #animalWeight{
     max-width:500px;
 }
+
+#result:empty{
+    display:none;
+}
+
+#result{
+    margin-top:15px;
+    background:#f5fbff;
+    border-left:5px solid #0099ff;
+    padding:15px;
+    border-radius:10px;
+    line-height:1.8;
+}
+
+@media (max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .card{
+        padding:15px;
+    }
+
+    .header{
+        padding:18px;
+    }
+
+    .header h1{
+        font-size:22px;
+    }
+
+    .header p{
+        font-size:14px;
+    }
+
+    input,
+    select,
+    button{
+        font-size:16px;
+        padding:14px;
+    }
+
+    .result-number{
+        font-size:32px;
+    }
+}
+
 }

@@ -102,9 +102,7 @@ padding:15px;
 border-radius:10px;
 line-height:1.8;
 }
-#result:empty{
-    display:none;
-}
+
 .result-card{
 grid-column:span 2;
 }
@@ -206,5 +204,19 @@ margin-top:10px;
         grid-column:auto;
     }
 
+}
+.dashboard{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+.card{
+    padding:25px;
+    margin-bottom:0;
+}
+
+#animalWeight{
+    max-width:500px;
 }
 }

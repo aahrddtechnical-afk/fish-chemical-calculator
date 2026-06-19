@@ -8,8 +8,8 @@ let waterVolumeLiter = 0;
 let pondAreaRai = 0;
 function calculateVolume() {
 
-const pondRaiValue =
-    document.getElementById("pondRai")?.value;
+    const pondRaiValue =
+        document.getElementById("pondRai")?.value;
 
     const pondType =
         document.getElementById("pondType").value;
@@ -21,7 +21,7 @@ const pondRaiValue =
         parseFloat(document.getElementById("length").value) || 0;
 
     const depth =
-    parseFloat(document.getElementById("depth").value) || 0;
+        parseFloat(document.getElementById("depth").value) || 0;
         
 console.log("=== calculateVolume ===");
 console.log("pondType =", pondType);
@@ -30,9 +30,9 @@ console.log("length =", length);
 console.log("depth =", depth);
 console.log("pondRai =", pondRaiValue);
 
-if (depth <= 0) {
-    alert("กรุณากรอกความลึก");
-    return;
+    if (depth <= 0) {
+         alert("กรุณากรอกความลึก");
+        return;
 }
 
 if (pondType === "คำนวณจากพื้นที่ (ไร่)") {
@@ -71,22 +71,22 @@ if (pondType === "บ่อรูปสี่เหลี่ยม") {
         volume = area * depth;
     }
 
-    else if (pondType === "บ่อรูปทรงกลม") {
+else if (pondType === "บ่อรูปทรงกลม") {
 
-        const radius = width / 2;
+    const radius = width / 2;
 
         area = Math.PI * radius * radius;
         volume = area * depth;
     }
 
-    else if (pondType === "บ่อรูปวงรี") {
+else if (pondType === "บ่อรูปวงรี") {
 
         area = Math.PI * (width / 2) * (length / 2);
         volume = area * depth;
     }
 
-    else if (
-    pondType === "คำนวณจากพื้นที่ (ไร่)"
+else if (
+       pondType === "คำนวณจากพื้นที่ (ไร่)"
 ) {
 
     const pondRai =

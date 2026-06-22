@@ -1,5 +1,7 @@
 console.log("SCRIPT VERSION 12-06-2026");
-
+window.onload = function() {
+    document.getElementById("result").style.display = "none";
+}
 const SHEET_URL =
 "https://opensheet.elk.sh/1o6skM5ZgGk6TNMf0ITwA6n9FpKQT3l80_2_V-lMItGM/ฐานข้อมูลสารเคมีสัตว์น้ำ";
 
@@ -106,13 +108,14 @@ else if (
     waterVolumeLiter = liter;
     pondAreaRai = rai;
 
-    document.getElementById("result").innerHTML =
-        "ปริมาตรน้ำ = " + volume.toFixed(2) + " ลบ.ม.<br>" +
-        "ปริมาตรน้ำ = " + liter.toLocaleString() + " ลิตร<br><br>" +
-        "พื้นที่บ่อ = " + area.toFixed(2) + " ตร.ม.<br>" +
-        "พื้นที่บ่อ = " + rai.toFixed(2) + " ไร่";
-    
-    document.getElementById("result").style.display = "block";  
+    const resultDiv = document.getElementById("result");
+
+resultDiv.innerHTML =
+    "ปริมาตรน้ำ = " + volume.toFixed(2) + " ลบ.ม.<br>" +
+    "ปริมาตรน้ำ = " + liter.toLocaleString() + " ลิตร<br><br>" +
+    "พื้นที่บ่อ = " + area.toFixed(2) + " ตร.ม.<br>" +
+    "พื้นที่บ่อ = " + rai.toFixed(2) + " ไร่";
+resultDiv.style.display = "block";
 }
 
 fetch(SHEET_URL)

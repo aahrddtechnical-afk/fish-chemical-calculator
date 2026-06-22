@@ -143,10 +143,14 @@ margin-top:10px;
 #result{
     display:none;
     margin-top:15px;
-    background:#f5fbff;
-    border-left:5px solid #0099ff;
-    padding:15px;
-    border-radius:10px;
+    background:linear-gradient(135deg,#0099ff,#00c2ff);
+    color:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+    font-weight:500;
 }
 
 #animalWeight{

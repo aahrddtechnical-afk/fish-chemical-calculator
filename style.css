@@ -64,7 +64,11 @@ border-radius:10px;
 font-size:15px;
 box-sizing:border-box;
 }
-
+#selectedRate{
+    background:#fff3cd;
+    border:3px solid #ffc107;
+    font-weight:bold;
+}
 input:focus,
 select:focus{
 outline:none;

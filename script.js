@@ -111,7 +111,8 @@ else if (
         "ปริมาตรน้ำ = " + liter.toLocaleString() + " ลิตร<br><br>" +
         "พื้นที่บ่อ = " + area.toFixed(2) + " ตร.ม.<br>" +
         "พื้นที่บ่อ = " + rai.toFixed(2) + " ไร่";
-        
+    
+    document.getElementById("result").style.display = "block";   
 }
 
 fetch(SHEET_URL)

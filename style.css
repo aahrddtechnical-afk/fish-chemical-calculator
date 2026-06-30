@@ -197,5 +197,20 @@ margin-top:10px;
     .result-number{
         font-size:32px;
     }
+.btn-water{
+    background:#0d6efd;
+}
 
+.btn-water:hover{
+    background:#0b5ed7;
+}
+
+/* ปุ่มสารเคมี */
+.btn-chemical{
+    background:#198754;
+}
+
+.btn-chemical:hover{
+    background:#157347;
+}
 }

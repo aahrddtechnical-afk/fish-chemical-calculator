@@ -161,25 +161,24 @@ button{
 }
 
 .result-box{
-    background:linear-gradient(135deg,#0099ff,#00c2ff);
-    color:#fff;
+    background:linear-gradient(135deg,#dff3ff,#cbeeff);
+    color:#1f3b5b;
+    text-align:center;
     border-radius:15px;
     padding:25px;
+    border:1px solid #9fd3f5;
 }
 
 .result-title{
     font-size:18px;
     margin-bottom:10px;
-}
-
-.result-number{
-    font-size:42px;
-    font-weight:bold;
+    color:#2b4c6f;
 }
 
 .result-sub{
     font-size:18px;
     margin-top:10px;
+    color:#2b4c6f;
 }
 
 /* ---------------- ข้อมูลสัตว์น้ำ ---------------- */

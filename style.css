@@ -1,154 +1,142 @@
 body{
-font-family:'Segoe UI',Tahoma,sans-serif;
-background:#eef5fb;
-margin:0;
-padding:15px;
+    font-family:'Segoe UI',Tahoma,sans-serif;
+    background:#eef5fb;
+    margin:0;
+    padding:15px;
 }
 
 .container{
-width:100%;
-max-width:1400px;
-margin:auto;
+    width:100%;
+    max-width:1400px;
+    margin:auto;
 }
 
+/* ---------------- Header ---------------- */
+
 .header{
-background:linear-gradient(135deg,#0066b3,#00a2ff);
-color:#fff;
-padding:25px;
-border-radius:18px;
-text-align:center;
-margin-bottom:20px;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
+    background:linear-gradient(135deg,#0066b3,#00a2ff);
+    color:#fff;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    margin-bottom:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .header h1{
-margin:0;
-font-size:30px;
+    margin:0;
+    font-size:30px;
 }
 
 .header p{
-margin-top:8px;
-opacity:.9;
+    margin-top:8px;
+    opacity:.9;
 }
 
+/* ---------------- Dashboard ---------------- */
+
+.dashboard{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* ---------------- Card ---------------- */
+
 .card{
-background:#fff;
-border-radius:18px;
-padding:22px;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
+    background:#fff;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 .card-title{
-background:#e8f4ff;
-color:#0066b3;
-padding:12px 15px;
-border-radius:10px;
-font-weight:700;
-margin-bottom:15px;
-font-size:18px;
+    background:#e8f4ff;
+    color:#0066b3;
+    padding:12px 15px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-bottom:15px;
+    font-size:18px;
 }
 
+/* ---------------- Form ---------------- */
+
 label{
-display:block;
-margin-top:12px;
-margin-bottom:5px;
-font-weight:600;
+    display:block;
+    margin-top:12px;
+    margin-bottom:5px;
+    font-weight:600;
 }
 
 input,
 select{
-width:100%;
-padding:12px;
-border:1px solid #d5dde5;
-border-radius:10px;
-font-size:15px;
-box-sizing:border-box;
+    width:100%;
+    padding:12px;
+    border:1px solid #d5dde5;
+    border-radius:10px;
+    font-size:15px;
+    box-sizing:border-box;
 }
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#0099ff;
+}
+
+/* ช่องอัตราที่ใช้คำนวณ */
+
 #selectedRate{
     background:#fff3cd;
     border:3px solid #ffc107;
     font-weight:bold;
 }
-input:focus,
-select:focus{
-outline:none;
-border-color:#0099ff;
-}
+
+/* ---------------- Button ---------------- */
 
 button{
-width:100%;
-padding:14px;
-margin-top:15px;
-border:none;
-border-radius:10px;
-background:#0077cc;
-color:#fff;
-font-size:16px;
-font-weight:700;
-cursor:pointer;
-transition:.2s;
+    width:100%;
+    padding:14px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
 }
 
-button:hover{
-background:#005fa3;
-transform:translateY(-2px);
+/* ปุ่มคำนวณปริมาตรน้ำ */
+
+.btn-water{
+    background:#0d6efd;
 }
 
-#result{
-margin-top:15px;
-background:#f5fbff;
-border-left:5px solid #0099ff;
-padding:15px;
-border-radius:10px;
-line-height:1.8;
+.btn-water:hover{
+    background:#0b5ed7;
+    transform:translateY(-2px);
 }
 
-.result-card{
-grid-column:span 2;
+/* ปุ่มคำนวณสารเคมี */
+
+.btn-chemical{
+    background:#198754;
 }
 
-#chemicalResult{
-padding:10px;
+.btn-chemical:hover{
+    background:#157347;
+    transform:translateY(-2px);
 }
 
-.result-box{
-background:linear-gradient(135deg,#0099ff,#00c2ff);
-color:white;
-text-align:center;
-border-radius:15px;
-padding:25px;
-}
-
-.result-title{
-font-size:18px;
-margin-bottom:10px;
-}
-
-.result-number{
-font-size:42px;
-font-weight:bold;
-}
-
-.result-sub{
-font-size:18px;
-margin-top:10px;
-}
-
-.dashboard{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-#result:empty{
-    display:none;
-}
+/* ---------------- Result ปริมาตรน้ำ ---------------- */
 
 #result{
     display:none;
     margin-top:15px;
     background:linear-gradient(135deg,#0099ff,#00c2ff);
-    color:white;
+    color:#fff;
     padding:20px;
     border-radius:15px;
     text-align:center;
@@ -157,22 +145,55 @@ margin-top:10px;
     font-weight:500;
 }
 
+#result:empty{
+    display:none;
+}
+
+/* ---------------- Result สารเคมี ---------------- */
+
+.result-card{
+    grid-column:span 2;
+}
+
+#chemicalResult{
+    padding:10px;
+    text-align:center;
+}
+
+.result-box{
+    background:linear-gradient(135deg,#0099ff,#00c2ff);
+    color:#fff;
+    border-radius:15px;
+    padding:25px;
+}
+
+.result-title{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.result-number{
+    font-size:42px;
+    font-weight:bold;
+}
+
+.result-sub{
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* ---------------- ข้อมูลสัตว์น้ำ ---------------- */
+
 #animalWeight{
     max-width:500px;
 }
 
-#chemicalResult{
-    text-align:center;
-}
+/* ---------------- Mobile ---------------- */
 
 @media (max-width:768px){
 
     body{
         padding:10px;
-    }
-
-    .card{
-        padding:15px;
     }
 
     .header{
@@ -187,6 +208,10 @@ margin-top:10px;
         font-size:14px;
     }
 
+    .card{
+        padding:15px;
+    }
+
     input,
     select,
     button{
@@ -197,20 +222,9 @@ margin-top:10px;
     .result-number{
         font-size:32px;
     }
-.btn-water{
-    background:#0d6efd;
-}
 
-.btn-water:hover{
-    background:#0b5ed7;
-}
+    #animalWeight{
+        max-width:100%;
+    }
 
-/* ปุ่มสารเคมี */
-.btn-chemical{
-    background:#198754;
-}
-
-.btn-chemical:hover{
-    background:#157347;
-}
 }

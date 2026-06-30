@@ -108,13 +108,24 @@ else if (
     waterVolumeLiter = liter;
     pondAreaRai = rai;
 
-    const resultDiv = document.getElementById("result");
+    const resultDiv = document.getElementById("result").innerHTML = `
+<b style="font-size:20px;">🌊 สรุปปริมาตรน้ำ</b><br><br>
 
-resultDiv.innerHTML =
-    "ปริมาตรน้ำ = " + volume.toFixed(2) + " ลบ.ม.<br>" +
-    "ปริมาตรน้ำ = " + liter.toLocaleString() + " ลิตร<br><br>" +
-    "พื้นที่บ่อ = " + area.toFixed(2) + " ตร.ม.<br>" +
-    "พื้นที่บ่อ = " + rai.toFixed(2) + " ไร่";
+<b>ปริมาตรน้ำ</b><br>
+<span style="font-size:28px;color:#005b96;font-weight:bold;">
+${volume.toFixed(2)}
+</span> ลบ.ม.<br>
+
+<span style="font-size:22px;font-weight:bold;">
+${liter.toLocaleString()}
+</span> ลิตร
+
+<hr style="margin:18px 0;border:0;border-top:1px solid #9fd3f5;">
+
+<b>พื้นที่บ่อ</b><br>
+${area.toFixed(2)} ตร.ม.<br>
+${rai.toFixed(2)} ไร่
+`;
 resultDiv.style.display = "block";
 }
 

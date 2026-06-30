@@ -135,14 +135,16 @@ button{
 #result{
     display:none;
     margin-top:15px;
-    background:linear-gradient(135deg,#0099ff,#00c2ff);
-    color:#fff;
+    background:linear-gradient(135deg,#dff3ff,#cbeeff);
+    color:#1f3b5b;
     padding:20px;
     border-radius:15px;
     text-align:center;
     font-size:18px;
-    line-height:1.8;
-    font-weight:500;
+    line-height:1.9;
+    font-weight:600;
+    border:1px solid #9fd3f5;
+    box-shadow:0 3px 10px rgba(0,120,200,.08);
 }
 
 #result:empty{

@@ -547,6 +547,31 @@ console.log("resultUnit =", resultUnit);
 document.getElementById("chemicalResult").innerHTML = `
 <div class="result-box">
 
+    <div style="
+        background:rgba(255,255,255,.15);
+        border-radius:12px;
+        padding:15px;
+        margin-bottom:20px;
+        text-align:left;
+        line-height:1.9;
+    ">
+
+        <div style="font-size:18px;font-weight:bold;margin-bottom:10px;">
+             สรุปการคำนวณ
+        </div>
+
+        <div> <b>สารเคมี :</b> ${chemicalName}</div>
+
+        <div> <b>วัตถุประสงค์ :</b> ${purpose}</div>
+
+        <div> <b>อัตราที่ใช้ :</b> ${rate} ${useUnit}</div>
+
+        <div> <b>ปริมาตรน้ำ :</b> ${waterVolumeLiter.toLocaleString()} ลิตร</div>
+
+        <div> <b>พื้นที่บ่อ :</b> ${pondAreaRai.toFixed(2)} ไร่</div>
+
+    </div>
+
     <div class="result-title">
         ปริมาณสารเคมีที่ต้องใช้
     </div>
@@ -561,9 +586,11 @@ document.getElementById("chemicalResult").innerHTML = `
 
     ${
         resultUnit === "กิโลกรัม"
-        ? `<div class="result-sub">
-              (${(result * 1000).toLocaleString()} กรัม)
-           </div>`
+        ? `
+        <div class="result-sub">
+            (${(result * 1000).toLocaleString()} กรัม)
+        </div>
+        `
         : ""
     }
 

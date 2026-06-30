@@ -108,7 +108,9 @@ else if (
     waterVolumeLiter = liter;
     pondAreaRai = rai;
 
-    const resultDiv = document.getElementById("result").innerHTML = `
+    const resultDiv = document.getElementById("result");
+
+resultDiv.innerHTML = `
 <b style="font-size:20px;">🌊 สรุปปริมาตรน้ำ</b><br><br>
 
 <b>ปริมาตรน้ำ</b><br>
@@ -126,6 +128,7 @@ ${liter.toLocaleString()}
 ${area.toFixed(2)} ตร.ม.<br>
 ${rai.toFixed(2)} ไร่
 `;
+
 resultDiv.style.display = "block";
 }
 

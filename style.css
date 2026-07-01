@@ -111,22 +111,22 @@ button{
 /* ปุ่มคำนวณปริมาตรน้ำ */
 
 .btn-water{
-    background:#0d6efd;
+    background:0F2854;
 }
 
 .btn-water:hover{
-    background:#0b5ed7;
+    background:1C4D8D;
     transform:translateY(-2px);
 }
 
 /* ปุ่มคำนวณสารเคมี */
 
 .btn-chemical{
-    background:#198754;
+    background:4988C4;
 }
 
 .btn-chemical:hover{
-    background:#157347;
+    background:BDE8F5;
     transform:translateY(-2px);
 }
 

@@ -204,7 +204,10 @@ function changePondType() {
 
     const pondType =
         document.getElementById("pondType").value;
-
+if (pondType === "") {
+    alert("กรุณาเลือกรูปแบบบ่อ");
+    return;
+}
     const widthLabel =
         document.getElementById("widthLabel");
 
